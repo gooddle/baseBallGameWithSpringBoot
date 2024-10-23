@@ -10,11 +10,15 @@ import lombok.Setter;
 public class BaseBallGameResultResponse {
     private boolean result;
     private int count;
+    private int ball;
+    private int strike;
 
-    public static BaseBallGameResultResponse from(BaseBallGame baseBallGame) {
+    public static BaseBallGameResultResponse from(BaseBallGame baseBallGame,int ball,int strike) {
         return BaseBallGameResultResponse.builder()
                 .result(baseBallGame.isResult())
                 .count(baseBallGame.getCount())
+                .ball(ball)
+                .strike(strike)
                 .build();
     }
 }
