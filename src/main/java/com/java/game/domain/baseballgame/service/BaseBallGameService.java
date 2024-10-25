@@ -17,7 +17,7 @@ import java.util.*;
 public class BaseBallGameService{
     private final BaseBallGameRepository baseBallGameRepository;
 
-
+    @Transactional
     public BaseBallGameResponse makeGame() {
             BaseBallGame newGame = new BaseBallGame();
             newGame.setAnswer(makeAnswer());
